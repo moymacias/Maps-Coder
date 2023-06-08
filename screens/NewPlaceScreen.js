@@ -9,17 +9,20 @@ import {
 import React, { useState } from "react";
 
 import { COLORS } from "../constants";
+import ImageSelector from "../components/ImageSelector";
+import LocationSelector from "../components/LocationSelector";
 import { addPlace } from "../store/places.actions";
 import { useDispatch } from "react-redux";
 
 const NewPlaceScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
+  const [image, setImage] = useState();
 
   const handleTitleChange = text => setTitle(text);
 
   const handleSave = () => {
-    dispatch(addPlace(title));
+    dispatch(addPlace(title, image));
     navigation.navigate("Direcciones");
   };
 
@@ -32,6 +35,8 @@ const NewPlaceScreen = ({ navigation }) => {
           value={title}
           onChangeText={handleTitleChange}
         />
+        <ImageSelector onImage={setImage} />
+        <LocationSelector />
         <Button
           title="Guardar direccion"
           color={COLORS.MAROON}
