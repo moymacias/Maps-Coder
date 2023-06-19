@@ -1,18 +1,19 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from "react-native";
+
+import React from "react";
 
 const PlaceDetailScreen = () => {
-    return (
-        <View style={styles.container}>
-            <Text>Detalle Direccion</Text>
-        </View>
-    )
-}
+  return (
+    <View style={styles.container}>
+      <Text>Detalle Direccion</Text>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    }
-})
+  container: {
+    flex: 1,
+  },
+});
 
-export default PlaceDetailScreen
+export default PlaceDetailScreen;

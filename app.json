@@ -1,10 +1,14 @@
 {
   "expo": {
-    "name": "appsMap",
-    "slug": "appsMap",
+    "name": "apps-Map",
+    "slug": "apps-map",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,12 +23,25 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.moymacias.appsmap"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "33227ccb-2107-4a3a-8add-84ceb3510fb1"
+      }
+    },
+    "owner": "moymacias",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/33227ccb-2107-4a3a-8add-84ceb3510fb1"
     }
   }
 }
